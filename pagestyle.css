@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.KosmikWrapper {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 80vw;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.gallery .thumb {
+  width: 150px;
+  cursor: pointer;
+  text-align: center;
+}
+.gallery .book-title {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #444444;
+}
+
+.fb3d-modal-shadow {
+  overflow: hidden;
+}
+
+.fb3d-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500001;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s step-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fb3d-modal.visible {
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.mount-container {
+  width: 100%;
+  height: 100%;
+}
+.fb3d-modal .mount-container {
+  position: absolute;
+  z-index: 1;
+}
+.flipbook-instance {
+  height: 100%;
+}
+.fb3d-modal .cmd-close {
+  font-size: 24px;
+  color: #cccccc;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  z-index: 2;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.fb3d-modal .cmd-close:active {
+  font-size: 22px;
+  padding-top: 1px;
+  padding-right: 1px;
+}
+.fb3d-modal .cmd-close:hover {
+  color: #eeeeee;
+  transition: color 0.15s ease-out;
+}
