@@ -1,0 +1,10 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "My App Port",
+      "onAutoForward": "notify"
+    }
+  }
+}
