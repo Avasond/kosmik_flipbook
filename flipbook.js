@@ -1,9 +1,14 @@
 $(document).ready(function () {
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get("booklet") || "brand"; // default to brand
+  const pdfMap = {
+    brand: "src/Kosmik-Brand-Booklet.pdf",
+    regen: "src/Regenerative-Partner-Booklet.pdf",
+  };
+
   const modal = $("#fb3d-lightbox");
   const container = modal.find(".mount-container");
-
   container.empty();
-
 
   const mainWrapper = $("<div class='main'></div>").appendTo(container);
   const flipbookInstance = $("<div class='flipbook-instance'></div>").appendTo(mainWrapper);
@@ -12,7 +17,7 @@ $(document).ready(function () {
   modal.addClass("visible");
 
   flipbookInstance.FlipBook({
-    pdf: "src/Kosmik-Brand-Booklet.pdf",
+    pdf: pdfMap[type],
     propertiesCallback: function (props) {
       props.preloadPages = 20;
       props.renderInactivePagesOnMobile = true;
