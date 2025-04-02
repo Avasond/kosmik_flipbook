@@ -2,7 +2,7 @@ $(document).ready(function () {
   const params = new URLSearchParams(window.location.search);
   const type = params.get("booklet") || "brand"; // default to brand
   const pdfMap = {
-    brand: "src/Kosmik-Brand-Booklet.pdf",
+    brand: "src/Kosmik-Brand-Booklet-generic.pdf",
     brandaz: "src/Kosmik-Brand-Booklet-az.pdf",
     brandmo: "src/Kosmik-Brand-Booklet-mo.pdf",
     brandma: "src/Kosmik-Brand-Booklet-ma.pdf",
