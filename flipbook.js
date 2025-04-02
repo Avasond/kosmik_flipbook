@@ -3,6 +3,10 @@ $(document).ready(function () {
   const type = params.get("booklet") || "brand"; // default to brand
   const pdfMap = {
     brand: "src/Kosmik-Brand-Booklet.pdf",
+    brandaz: "src/Kosmik-Brand-Booklet-az.pdf",
+    brandmo: "src/Kosmik-Brand-Booklet-mo.pdf",
+    brandma: "src/Kosmik-Brand-Booklet-ma.pdf",
+    brandnm: "src/Kosmik-Brand-Booklet-nm.pdf",
     regen: "src/Regenerative-Partner-Booklet.pdf",
   };
 
